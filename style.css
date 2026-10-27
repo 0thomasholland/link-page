@@ -78,6 +78,7 @@ nav:first-of-type h2{margin-top:0}
 .links li:nth-child(6){--c:#b4e0c4}
 .links.sites li:nth-child(1){--c:#a8c4e0}
 .links.sites li:nth-child(2){--c:#f3e08a}
+.links.sites li:nth-child(3){--c:#b4e0c4}
 
 .link{
   display:flex;align-items:center;gap:1rem;min-height:3.75rem;padding:.5rem 1.5rem .5rem .5rem;
@@ -120,6 +121,7 @@ a.link:focus-visible{outline:3px solid var(--text);outline-offset:3px}
   main{max-width:44rem}
   .intro{max-width:30rem}
   .links{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .links li:last-child:nth-child(odd){grid-column:1/-1}
   .link{min-height:4rem;font-size:1.0625rem}
 }
 @media (min-width:700px) and (max-width:899px){.link{gap:.75rem;padding-right:1rem;font-size:1rem}}
