@@ -45,7 +45,7 @@ main{width:100%;max-width:26rem;text-align:center}
 }
 h1{margin:0;font:400 clamp(2.75rem,12vw,3.75rem)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.03em}
 .intro{margin:1rem auto 2.25rem;max-width:22rem;color:var(--text-muted);font-size:1.0625rem;font-weight:300;line-height:1.6}
-.intro em{font:italic 400 1.2em/1 "Instrument Serif",Georgia,serif;color:var(--text)}
+.intro em{white-space:nowrap;font:italic 400 1.2em/1 "Instrument Serif",Georgia,serif;color:var(--text)}
 
 .links{margin:0;padding:0;list-style:none;display:grid;gap:.875rem}
 .links li{animation:pop .6s var(--bounce) both}
