@@ -11,7 +11,7 @@ One-page link site for [thomasholland.link](https://thomasholland.link). Plain H
 
 ## Editing links
 
-Links live in the `<ul class="links">` list in `index.html`. The Mastodon link carries `rel="me"` for profile verification, so keep it.
+Links live in two lists in `index.html`: Social, and Websites (`<ul class="links sites">`). The layout is one column on phones and two columns from 700px. The Mastodon link carries `rel="me"` for profile verification, so keep it.
 
 ## Hosting
 
