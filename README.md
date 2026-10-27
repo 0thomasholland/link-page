@@ -6,12 +6,12 @@ One-page link site for [thomasholland.link](https://thomasholland.link). Plain H
 
 - `index.html`, `style.css`: the page.
 - `fonts/`: DM Sans, DM Mono and Instrument Serif, copied from [thomasholland.uk](https://thomasholland.uk).
-- `favicon.svg`, `apple-touch-icon.png`, `og.png`: icons and social preview image.
-- `assets/og.html`: source for `og.png` (1200×630) and `apple-touch-icon.png`. Open it in a browser and screenshot it to regenerate.
+- `favicon.svg`, `favicon.ico`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`, `site.webmanifest`: favicons. `og.png`: social preview image.
+- `assets/og.html`: source for `og.png` (1200×630). Open it in a browser and screenshot it to regenerate. The PNG icons are renders of `favicon.svg` on a full-bleed square.
 
 ## Editing links
 
-Links live in the `<ul class="links">` list in `index.html`. Entries marked `TODO` are placeholders with no `href`. To fill one in, replace the `<span class="link is-todo">` element with an `<a class="link" href="...">`. The Mastodon link needs `rel="me"` for profile verification.
+Links live in the `<ul class="links">` list in `index.html`. The Twitter entry is a `TODO` placeholder with no `href`. To fill one in, replace the `<span class="link is-todo">` element with an `<a class="link" href="...">`. The Mastodon link carries `rel="me"` for profile verification, so keep it.
 
 ## Hosting
 
