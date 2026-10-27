@@ -16,3 +16,5 @@ Links live in the `<ul class="links">` list in `index.html`. The Twitter entry i
 ## Hosting
 
 Cloudflare Pages, deployed from `main` with no build command and `/` as the output directory. Custom domain: `thomasholland.link`.
+
+Pushes to `main` deploy automatically through the Cloudflare Pages Git connection.
