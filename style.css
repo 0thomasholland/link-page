@@ -96,9 +96,6 @@ a.link:hover .arrow{transform:translate(2px,-2px)}
 a.link:active{animation:none;transform:scale(1.03,.88);box-shadow:var(--shadow);transition-duration:.1s}
 a.link:focus-visible{outline:3px solid var(--text);outline-offset:3px}
 
-.link.is-todo{background:var(--card);border-style:dashed;color:var(--text-muted);box-shadow:none;cursor:default}
-.link.is-todo .icon{background:var(--accent-soft);opacity:.7}
-.link.is-todo .arrow{letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
 
 @keyframes bob{
   0%,100%{transform:translateY(0) scale(1.04,.96)}

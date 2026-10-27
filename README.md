@@ -11,7 +11,7 @@ One-page link site for [thomasholland.link](https://thomasholland.link). Plain H
 
 ## Editing links
 
-Links live in the `<ul class="links">` list in `index.html`. The Twitter entry is a `TODO` placeholder with no `href`. To fill one in, replace the `<span class="link is-todo">` element with an `<a class="link" href="...">`. The Mastodon link carries `rel="me"` for profile verification, so keep it.
+Links live in the `<ul class="links">` list in `index.html`. The Mastodon link carries `rel="me"` for profile verification, so keep it.
 
 ## Hosting
 
