@@ -38,7 +38,7 @@
 
 *,:before,:after{box-sizing:border-box}
 html{background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
-body{position:relative;overflow-x:clip;margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:clamp(1.5rem,6vw,3rem) 1.25rem}
+body{text-transform:lowercase;position:relative;overflow-x:clip;margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:clamp(1.5rem,6vw,3rem) 1.25rem}
 ::selection{background:var(--text);color:var(--bg)}
 
 body:before,body:after,.blobs{content:"";position:fixed;z-index:-1;border-radius:50%;pointer-events:none;opacity:var(--blob-opacity)}
@@ -59,7 +59,7 @@ h1{margin:0;font:400 clamp(2.75rem,12vw,3.75rem)/1 "Instrument Serif",Georgia,se
 .intro{margin:1rem auto 2.25rem;max-width:22rem;color:var(--text-muted);font-size:1.0625rem;font-weight:300;line-height:1.6}
 .intro em{white-space:nowrap;text-decoration:underline wavy var(--blob-a) 2px;text-underline-offset:.28em;font:italic 400 1.2em/1 "Instrument Serif",Georgia,serif;color:var(--text)}
 
-h2{margin:2.25rem 0 .875rem;font:500 .7rem "DM Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+h2{margin:2.25rem 0 .875rem;font:500 .7rem "DM Mono",ui-monospace,monospace;letter-spacing:.14em;color:var(--text-muted)}
 nav:first-of-type h2{margin-top:0}
 .links{margin:0;padding:0;list-style:none;display:grid;gap:.875rem}
 .links li{animation:pop .6s var(--bounce) both}
@@ -121,7 +121,7 @@ a.link:focus-visible{outline:3px solid var(--text);outline-offset:3px}
   main{max-width:44rem}
   .intro{max-width:30rem}
   .links{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-  .links li:last-child:nth-child(odd){grid-column:1/-1}
+  .links li:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - .5rem)}
   .link{min-height:4rem;font-size:1.0625rem}
 }
 @media (min-width:700px) and (max-width:899px){.link{gap:.75rem;padding-right:1rem;font-size:1rem}}
