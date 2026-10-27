@@ -1,0 +1,91 @@
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:100 1000;font-display:swap;src:url(fonts/dm-sans-variable.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/dm-mono-medium.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-regular.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic.woff2) format("woff2")}
+
+:root{
+  --bg:#f0ede8;
+  --card:#f9f7f3;
+  --text:#1e1b18;
+  --text-muted:#69675f;
+  --accent:#91a5ba;
+  --accent-soft:#dde5ec;
+  --border:#0000001a;
+  --shadow:0 1px 2px #1e1b180d,0 6px 16px -4px #1e1b181a;
+  --shadow-lift:0 2px 4px #1e1b180d,0 14px 28px -6px #1e1b1829;
+  --bounce:cubic-bezier(.34,1.56,.64,1);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#111110;
+    --card:#1a1918;
+    --text:#eceae4;
+    --text-muted:#a09e94;
+    --accent-soft:#2a3440;
+    --border:#ffffff1c;
+    --shadow:0 1px 2px #0006,0 6px 16px -4px #0008;
+    --shadow-lift:0 2px 4px #0006,0 14px 28px -6px #000a;
+  }
+}
+
+*,:before,:after{box-sizing:border-box}
+html{background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:clamp(1.5rem,6vw,3rem) 1.25rem;background:var(--bg)}
+::selection{background:var(--text);color:var(--bg)}
+
+main{width:100%;max-width:26rem;text-align:center}
+
+.avatar{
+  display:grid;place-items:center;width:6rem;height:6rem;margin:0 auto 1.5rem;
+  border-radius:50%;background:var(--accent);color:#fff;
+  font:700 2rem/1 "DM Sans",system-ui,sans-serif;letter-spacing:-.06em;
+  box-shadow:var(--shadow-lift);
+  animation:bob 4s ease-in-out infinite;
+}
+h1{margin:0;font:400 clamp(2.75rem,12vw,3.75rem)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.03em}
+.intro{margin:1rem auto 2.25rem;max-width:22rem;color:var(--text-muted);font-size:1.0625rem;font-weight:300;line-height:1.6}
+.intro em{font:italic 400 1.2em/1 "Instrument Serif",Georgia,serif;color:var(--text)}
+
+.links{margin:0;padding:0;list-style:none;display:grid;gap:.875rem}
+.links li{animation:pop .6s var(--bounce) both}
+.links li:nth-child(1){animation-delay:.05s}
+.links li:nth-child(2){animation-delay:.12s}
+.links li:nth-child(3){animation-delay:.19s}
+.links li:nth-child(4){animation-delay:.26s}
+.links li:nth-child(5){animation-delay:.33s}
+
+.link{
+  display:flex;align-items:center;gap:1rem;min-height:3.75rem;padding:.5rem 1.5rem .5rem .5rem;
+  border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text);
+  box-shadow:var(--shadow);text-decoration:none;font-size:1.0625rem;font-weight:500;text-align:left;
+  transition:transform .35s var(--bounce),box-shadow .25s,background-color .25s;
+}
+.link .icon{
+  display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;
+  background:var(--accent-soft);transition:transform .35s var(--bounce),background-color .25s;
+}
+.link svg{width:1.375rem;height:1.375rem;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.link svg .fill{fill:currentColor;stroke:none}
+.link .label{flex:1}
+.link .arrow{font:500 .9rem "DM Mono",ui-monospace,monospace;color:var(--text-muted);transition:transform .35s var(--bounce)}
+
+a.link:hover{transform:translateY(-3px) scale(1.025);box-shadow:var(--shadow-lift)}
+a.link:hover .icon{transform:rotate(-8deg) scale(1.08);background:var(--accent)}
+a.link:hover .arrow{transform:translate(2px,-2px)}
+a.link:active{transform:scale(.97);box-shadow:var(--shadow);transition-duration:.12s}
+a.link:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+
+.link.is-todo{border-style:dashed;color:var(--text-muted);box-shadow:none;cursor:default}
+.link.is-todo .arrow{letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
+
+@keyframes bob{50%{transform:translateY(-6px) rotate(-3deg)}}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.94)}}
+
+@media (min-width:640px){
+  main{max-width:28rem}
+  .link{min-height:4rem;font-size:1.125rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,:before,:after{animation:none!important;transition:none!important}
+}
